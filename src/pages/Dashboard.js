@@ -1,22 +1,12 @@
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const Dashboard = () => {
-    const { user, logout } = useContext(AuthContext);
-    const navigate = useNavigate();
-
-    const handleLogout = () => {
-        logout();
-        navigate("/");
-    };
-
-    return (
-        <div className="container mt-5">
-            <h2>Chào mừng {user?.username}!</h2>
-            <button className="btn btn-danger" onClick={handleLogout}>Đăng xuất</button>
-        </div>
-    );
+  return (
+    <div className="container mt-5">
+      <h1>Dashboard Thống Kê</h1>
+      <p>Hiển thị các biểu đồ và thống kê thu chi tài chính của bạn tại đây.</p>
+    </div>
+  );
 };
 
 export default Dashboard;
